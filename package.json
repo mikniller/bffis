@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "del-cli dist -f",
     "webpack": "webpack -p",
     "server": "webpack-dev-server --progress --colors"
   },
@@ -14,6 +14,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
+    "del-cli": "^1.0.0",
     "file-loader": "^0.11.1",
     "image-webpack-loader": "^3.3.1",
     "less": "^2.7.2",
@@ -21,6 +22,7 @@
     "style-loader": "^0.18.1"
   },
   "dependencies": {
+    "postscribe": "^2.0.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",

@@ -21,10 +21,10 @@ let fileLoaderOptions = {
 };
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: './client/bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: './bundle.js'
   },
   module: {
     loaders: [
@@ -36,10 +36,10 @@ module.exports = {
         },
         exclude: [path.resolve(__dirname, "node_modules")]
       }, {
-        test: /\.less$/,
+        test: /\.kiss$/,
         loaders: ['style-loader', 'css-loader', 'less-loader']
       }, {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg)c$/i,
         use: [
           {
             loader: 'file-loader',
